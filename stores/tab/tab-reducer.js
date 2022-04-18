@@ -4,7 +4,7 @@ const initialState = {
   isTradeModalVisible: false,
 };
 
-export const tabReducer = (state = initialState, action) => {
+const tabReducer = (state = initialState, action) => {
   switch (action.type) {
     case tabActionTypes.SET_TRADE_MODAL_VISIBILITY:
       return {
@@ -15,3 +15,5 @@ export const tabReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default tabReducer;
