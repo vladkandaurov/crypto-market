@@ -15,7 +15,7 @@ export const getHoldingsBegin = () => ({
 });
 
 export const getHoldingsSuccess = (myHoldings) => ({
-  type: GET_COIN_MARKET_SUCCESS,
+  type: GET_HOLDINGS_SUCCESS,
   payload: { myHoldings },
 });
 
@@ -51,7 +51,7 @@ export function getHoldings(
       },
     })
       .then((response) => {
-        if (response.status === 200) {
+        if (response.status == 200) {
           let myHoldings = response.data.map((item) => {
             let coin = holdings.find((a) => a.id == item.id);
             let price7d =
@@ -70,7 +70,7 @@ export function getHoldings(
               holding_value_change_7d:
                 (item.current_price - price7d) * coin.qty,
               sparkline_in_7d: {
-                value: item.sparkline_in_7d.map((price) => {
+                value: item.sparkline_in_7d.price.map((price) => {
                   return price * coin.qty;
                 }),
               },
