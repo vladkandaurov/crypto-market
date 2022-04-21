@@ -5,11 +5,11 @@ export const holdings = [
   },
   {
     id: 'ethereum',
-    qty: 0,
+    qty: 3,
   },
   {
     id: 'dogecoin',
-    qty: 0,
+    qty: 500,
   },
 ];
 
