@@ -177,7 +177,7 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                       lineHeight: 15,
                       ...FONTS.h4,
                     }}>
-                    $ {item.total.toLocaleString()}
+                    $ {item.total.toFixed(2)}
                   </Text>
                   <Text
                     style={{
